@@ -1,0 +1,17 @@
+@import '../../../node_modules/swiper/swiper.scss';
+@import '../../../node_modules/swiper/components/effect-fade/effect-fade.scss';
+@import '../../../node_modules/swiper/components/pagination/pagination.scss';
+@import '../../../node_modules/swiper/components/navigation/navigation.scss';
+
+:root {
+  --swiper-theme-color: #172158;
+}
+.swiper-container-horizontal > .swiper-pagination-progressbar,
+.swiper-container-vertical
+  > .swiper-pagination-progressbar.swiper-pagination-progressbar-opposite {
+  height: 0.25vw;
+  top: auto;
+  @media (min-width: 768px) {
+    height: 2px;
+  }
+}

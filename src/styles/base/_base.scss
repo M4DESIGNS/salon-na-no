@@ -1,0 +1,162 @@
+$default_color: #333;
+$accent_color: #172158;
+$input_border_color: #dedede;
+$inputfocus_bg_color: #fefefa;
+
+html {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  font-size: 3.2vw;
+  @media (min-width: 768px) {
+    font-size: 16px;
+  }
+}
+body {
+  font-family: $default_font;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: auto;
+  font-kerning: normal;
+  line-height: 1.75;
+  margin: 0;
+  padding: 0;
+  color: $default_color;
+  overflow-x: hidden;
+}
+
+i,
+cite,
+em,
+address,
+dfn {
+  font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: inherit;
+  font-family: inherit;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+a {
+  color: $accent_color;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $accent_color;
+    text-decoration: none;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+figure {
+  margin: 0;
+}
+
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  > ul,
+  > ol {
+    margin-bottom: 0;
+  }
+}
+
+dd {
+  margin-left: 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  text-align: left;
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+p:last-of-type {
+  margin-bottom: 0;
+}
+
+input {
+  -webkit-appearance: none; // Safariのスタイルが勝手に適用されるのを防ぐ
+}
+
+input[type='text'],
+input[type='email'],
+input[type='password'],
+input[type='search'],
+input[type='tel'],
+input[type='url'] {
+  font-family: -apple-system, 'BlinkMacSystemFont', 'Hiragino Sans',
+    'Hiragino Kaku Gothic Pro', '游ゴシック体', YuGothic, '游ゴシック',
+    'Yu Gothic', Meiryo, sans-serif;
+  font-size: 1rem;
+  border-radius: 3px;
+  border: 1px solid $input_border_color;
+  padding: 0.5em;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+  &:focus {
+    background: $inputfocus_bg_color;
+  }
+}
+
+select {
+  font-family: -apple-system, 'BlinkMacSystemFont', 'Hiragino Sans',
+    'Hiragino Kaku Gothic Pro', '游ゴシック体', YuGothic, '游ゴシック',
+    'Yu Gothic', Meiryo, sans-serif;
+  font-size: 1rem;
+  border-radius: 3px;
+  border: 1px solid $input_border_color;
+  padding: 0.5em 0.5em;
+  -webkit-appearance: none;
+}
+
+textarea {
+  font-family: -apple-system, 'BlinkMacSystemFont', 'Hiragino Sans',
+    'Hiragino Kaku Gothic Pro', '游ゴシック体', YuGothic, '游ゴシック',
+    'Yu Gothic', Meiryo, sans-serif;
+  font-size: 1rem;
+  border-radius: 3px;
+  border: 1px solid $input_border_color;
+  padding: 0.5em 0.5em;
+  width: 100%;
+  min-height: 8rem;
+  vertical-align: top;
+  resize: vertical;
+  -webkit-appearance: none;
+  &:focus {
+    background: $inputfocus_bg_color;
+  }
+}
+
+section {
+  position: relative;
+  overflow: hidden;
+}

@@ -1,0 +1,11 @@
+/dist
+/node_modules
+/wordpress/*
+/*.log
+/yarn.lock
+*/.DS_Store
+
+
+!/wordpress/wp-content/themes/bls
+!*/wp-config.php
+public/.DS_Store
