@@ -23,7 +23,6 @@ export const modal = () => {
     for (let index = 0; index < triggerLen; index++) {
       trigger[index].addEventListener('click', (e) => {
         e.preventDefault()
-        console.log('close')
 
         for (let i = 0; i < targetLen; i++) {
           if (target[i].classList.contains(cls)) {

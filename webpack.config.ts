@@ -115,7 +115,7 @@ const WPBundle: webpack.Configuration = {
   entry: './src/index.ts',
   output: {
     filename: 'js/scripts.js',
-    path: `${__dirname}/wordpress/wp-content/themes/tetote/assets`,
+    path: `${__dirname}/wordpress/wp-content/themes/bls/assets`,
   },
   module: {
     rules: [
@@ -182,14 +182,14 @@ const WPBundle: webpack.Configuration = {
           from: path.resolve(__dirname, 'public/images'),
           to: path.resolve(
             __dirname,
-            'wordpress/wp-content/themes/tetote/assets/images'
+            'wordpress/wp-content/themes/bls/assets/images'
           ),
         },
         {
           from: path.resolve(__dirname, 'public/fonts'),
           to: path.resolve(
             __dirname,
-            'wordpress/wp-content/themes/tetote/assets/fonts'
+            'wordpress/wp-content/themes/bls/assets/fonts'
           ),
         },
       ],
