@@ -15,9 +15,6 @@ let currentWidth = window.innerWidth
 window.addEventListener('DOMContentLoaded', () => {})
 
 window.addEventListener('load', () => {
-  // Loadingスライド
-  // initLoading()
-
   scrollHeader()
 
   initMainvisual()
@@ -33,6 +30,9 @@ window.addEventListener('load', () => {
   scroll
 
   scrollTrigger()
+
+  // Loadingアニメーション
+  initLoading()
 })
 
 window.addEventListener('resize', () => {

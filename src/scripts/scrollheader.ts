@@ -2,12 +2,12 @@ export const scrollHeader = () => {
   const target = document.getElementById('header') as HTMLElement
   const clsTp = 'js_isTop'
   const clsSd = 'js_isScrolldown'
-  let offset = 0
   let lastPosition = 0
+  let currentPosition = 0
   let ticking = false as boolean
 
   const onScroll = () => {
-    if (lastPosition > offset) {
+    if (currentPosition > lastPosition && currentPosition != 0) {
       if (!target.classList.contains(clsSd)) {
         target.classList.add(clsSd)
       }
@@ -16,7 +16,7 @@ export const scrollHeader = () => {
         target.classList.remove(clsSd)
       }
     }
-    if (lastPosition == 0) {
+    if (currentPosition == 0) {
       if (!target.classList.contains(clsTp)) {
         target.classList.add(clsTp)
       }
@@ -25,11 +25,11 @@ export const scrollHeader = () => {
         target.classList.remove(clsTp)
       }
     }
-    offset = lastPosition
+    lastPosition = currentPosition
   }
 
   window.addEventListener('scroll', () => {
-    lastPosition = window.scrollY
+    currentPosition = window.scrollY
     if (!ticking) {
       window.requestAnimationFrame(() => {
         onScroll()

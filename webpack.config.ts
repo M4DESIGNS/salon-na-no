@@ -204,5 +204,6 @@ const WPBundle: webpack.Configuration = {
 }
 
 const config = [staticBundle, WPBundle]
+// const config = [staticBundle]
 
 export default config
