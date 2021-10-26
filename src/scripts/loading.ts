@@ -6,5 +6,5 @@ export const initLoading = () => {
     loadingEl.classList.add(cls)
   }
 
-  window.setTimeout(addCls, 3000)
+  window.setTimeout(addCls, 1000)
 }
