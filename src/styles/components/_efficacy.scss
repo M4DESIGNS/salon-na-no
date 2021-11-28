@@ -1,0 +1,147 @@
+.bl_efficacy_container {
+  margin-bottom: 25vw;
+  @media (min-width: 768px) {
+    width: 90%;
+    margin-bottom: 100px;
+  }
+}
+.bl_effItem_wrapper {
+  position: relative;
+  background: #fff;
+}
+.bl_effItem_ttl {
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  top: 0;
+  left: 0;
+  font-family: Lato;
+  font-weight: 400;
+  color: $key_color;
+  transform: rotate(90deg) translate(0, -18vw);
+  transform-origin: left top;
+  @media (min-width: 768px) {
+    transform: rotate(90deg) translate(0, -39vw);
+  }
+}
+.bl_effItem_imgWrapper {
+  width: 80%;
+  margin-right: 0;
+  margin-left: auto;
+  @media (min-width: 768px) {
+    width: 55%;
+  }
+}
+.bl_effItem_contWrapper {
+  position: relative;
+  width: 90%;
+  margin-top: -13vw;
+  padding: 10vw 7vw;
+  background: rgba($color: #fff, $alpha: 0.4);
+  backdrop-filter: blur(6px);
+  border-radius: 0.8vw;
+  z-index: 1;
+  @media (min-width: 768px) {
+    width: 55%;
+    padding: 40px;
+    margin-top: -15%;
+    margin-right: 30vw;
+    margin-left: auto;
+  }
+  @media (min-width: 1000px) {
+    margin-top: -20%;
+  }
+  @media (min-width: 1150px) {
+    margin-top: -25%;
+  }
+}
+.bl_effItem_contUl {
+  margin-bottom: 1.5em;
+}
+.bl_effItem_contLi {
+  position: relative;
+  padding-left: 1em;
+  &::before {
+    content: '';
+    position: absolute;
+    width: 0.3em;
+    height: 0.3em;
+    top: 50%;
+    left: 0;
+    background: $key_color;
+    transform: translate(0, -50%);
+  }
+}
+.bl_effItem_bg {
+  position: absolute;
+  width: 70%;
+  height: 80%;
+  bottom: -10vw;
+  left: 0;
+  z-index: 0;
+  opacity: 0.85;
+  @media (min-width: 768px) {
+    width: 65%;
+    height: 55%;
+    bottom: -5%;
+  }
+}
+.bl_efficacy_dots {
+  position: absolute;
+  width: 50vw;
+  height: 70vw;
+  bottom: -5vw;
+  right: 0;
+  z-index: -2;
+  @media (min-width: 768px) {
+    width: 280px;
+    height: 160px;
+    top: 8vw;
+    right: auto;
+    bottom: auto;
+    left: 5vw;
+  }
+}
+.bl_effSld_btnWrapper {
+  position: absolute;
+  width: 16vw;
+  height: 8vw;
+  top: 30vw;
+  left: 2vw;
+  z-index: 10;
+  @media (min-width: 768px) {
+    width: 60px;
+    height: 30px;
+    top: 15%;
+    left: auto;
+    right: 50.5vw;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    top: 0;
+    border-top: solid 1px $key_color;
+  }
+}
+.bl_effSld_btn {
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  bottom: 0;
+  transform: rotate(45deg);
+  @media (min-width: 768px) {
+    width: 0.7em;
+    height: 0.7em;
+    cursor: pointer;
+  }
+}
+.bl_effSld_prev {
+  border-bottom: solid 2px $key_color;
+  border-left: solid 2px $key_color;
+}
+.bl_effSld_next {
+  right: 0;
+  border-top: solid 2px $key_color;
+  border-right: solid 2px $key_color;
+}

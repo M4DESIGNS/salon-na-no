@@ -1,13 +1,13 @@
-$default_color: #333;
-$accent_color: #172158;
+$default_color: #555;
+$accent_color: #9e895b;
 $input_border_color: #dedede;
 $inputfocus_bg_color: #fafafe;
 
 html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  font-size: 3.2vw;
+  font-size: 3.42vw;
   @media (min-width: 768px) {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 body {
@@ -92,6 +92,10 @@ th {
 
 p {
   margin: 0 0 1em;
+  a {
+    color: $accent_color;
+    text-decoration: underline;
+  }
 }
 
 p:last-of-type {

@@ -10,13 +10,13 @@ import { initAOS } from './initAOS'
 
 SwiperCore.use([Swiper, Autoplay, EffectFade, Pagination, Navigation])
 
-export const initMainvisual = () => {
-  const swiper = new Swiper('.js_mvSlider', swiperParams1)
+export const initConceptSlider = () => {
+  const swiper = new Swiper('.js_conceptSlider', swiperParams1)
   initAOS()
 }
 
-export const initMenuSlider = () => {
-  const swiper = new Swiper('.js_menuSlider', swiperParams2)
+export const initEfficacySlider = () => {
+  const swiper = new Swiper('.js_effSlider', swiperParams2)
 }
 
 const swiperParams1: SwiperOptions = {
@@ -31,27 +31,20 @@ const swiperParams1: SwiperOptions = {
   fadeEffect: {
     crossFade: true,
   },
-  pagination: {
-    el: '.swiper-pagination',
-    type: 'progressbar',
-  },
 }
 
 const swiperParams2: SwiperOptions = {
   loop: true,
-  slidesPerView: 1,
-  centeredSlides: true,
-  spaceBetween: 100,
-  navigation: {
-    nextEl: '.bl_menuSlider_next',
-    prevEl: '.bl_menuSlider_prev',
+  speed: 2000,
+  autoplay: {
+    delay: 8000,
   },
-  breakpoints: {
-    768: {
-      slidesPerView: 2,
-    },
-    1280: {
-      slidesPerView: 2.5,
-    },
+  effect: 'fade',
+  fadeEffect: {
+    crossFade: true,
+  },
+  navigation: {
+    nextEl: '.bl_effSld_next',
+    prevEl: '.bl_effSld_prev',
   },
 }

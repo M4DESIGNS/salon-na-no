@@ -2,44 +2,32 @@ import './styles/style.scss'
 import 'core-js/stable'
 import 'regenerator-runtime/runtime'
 import { initLoading } from './scripts/loading'
-import { initMainvisual, initMenuSlider } from './scripts/swiper'
-import { scrollHeader } from './scripts/scrollheader'
+import { initConceptSlider, initEfficacySlider } from './scripts/swiper'
 import { spToggle, initSPToggle } from './scripts/spToggle'
-import { modal } from './scripts/modal'
-import { initAccordion } from './scripts/accordion'
 import { scroll } from './scripts/smoothScroll'
-import { scrollTrigger } from './scripts/scrollTrigger'
+import { initAOS } from './scripts/initAOS'
 
 let currentWidth = window.innerWidth
 
 window.addEventListener('DOMContentLoaded', () => {})
 
 window.addEventListener('load', () => {
-  scrollHeader()
-
-  initMainvisual()
+  initConceptSlider()
 
   spToggle()
 
-  modal()
-
-  initAccordion()
-
-  initMenuSlider()
+  initEfficacySlider()
 
   scroll
 
-  scrollTrigger()
-
-  // Loadingアニメーション
-  initLoading()
+  initAOS()
 })
 
 window.addEventListener('resize', () => {
   if (currentWidth == window.innerWidth) {
     return
   } else {
-    initMainvisual()
+    initConceptSlider()
 
     initSPToggle()
   }
