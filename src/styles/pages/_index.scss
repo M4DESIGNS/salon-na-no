@@ -303,23 +303,108 @@
 // RESERVATION
 .bl_reserv_wrapper {
   width: 80%;
-  max-width: 960px;
+  max-width: 800px;
   margin: 0 auto 14vw;
   @media (min-width: 768px) {
     margin-bottom: 150px;
   }
 }
-.bl_reserv_btnWrapper {
+.bl_reserv_btn {
+  position: relative;
+  width: 100%;
+  margin-top: 10vw;
+  padding: 2vw 0;
+  border: 1px solid $key_color;
+  color: $key_color;
+  text-align: center;
+  line-height: 1.5;
+  @media (min-width: 768px) {
+    margin-top: 50px;
+    padding: 12px 0;
+    cursor: pointer;
+  }
+  &.js_isOpen {
+    background: $key_color;
+    color: #fff;
+    .bl_reserv_btnIcon {
+      transform: rotate(180deg);
+      fill: #fff;
+    }
+    .bl_reserv_btnDeco {
+      fill: #d9d4c9;
+    }
+  }
+}
+.bl_reserv_btnIcon {
+  display: block;
+  width: 3vw;
+  height: 3vw;
+  margin: 0 auto;
+  fill: $key_color;
+  transition: 0.5s;
+  @media (min-width: 768px) {
+    width: 12px;
+    height: 12px;
+  }
+}
+.bl_reserv_btnDeco {
+  position: absolute;
+  width: 40vw;
+  top: 50%;
+  right: -10vw;
+  left: auto;
+  fill: $key_color;
+  transition: 0.5s;
+  @media (min-width: 768px) {
+    width: 290px;
+    max-width: 350px;
+    top: 10%;
+    right: -10%;
+  }
+}
+.bl_reserv_accord {
+  width: 100%;
+  height: 0;
+  margin-bottom: 10vw;
+  padding: 0;
+  border-bottom: 1px dotted $key_color;
+  transition: 0.5s;
+  overflow: hidden;
+  visibility: hidden;
+  line-height: 0;
+  text-align: center;
+  opacity: 0;
+  @media (min-width: 768px) {
+    margin-bottom: 40px;
+  }
+  &.js_isOpen {
+    height: auto;
+    padding: 4vw 0;
+    visibility: visible;
+    line-height: normal;
+    opacity: 1;
+    @media (min-width: 768px) {
+      padding: 30px 0;
+    }
+  }
+}
+.bl_reserv_btn2col {
   margin: 7vw auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   @media (min-width: 768px) {
     margin-top: 50px;
+    .el_btn {
+      width: 43%;
+    }
+  }
+  .el_btn {
+    width: 100%;
   }
   & > * {
-    margin-bottom: 7vw;
+    margin-bottom: 4vw;
     @media (min-width: 768px) {
       margin-bottom: 0;
     }

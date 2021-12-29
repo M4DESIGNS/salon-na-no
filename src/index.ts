@@ -6,6 +6,7 @@ import { initConceptSlider, initEfficacySlider } from './scripts/swiper'
 import { spToggle, initSPToggle } from './scripts/spToggle'
 import { scroll } from './scripts/smoothScroll'
 import { initAOS } from './scripts/initAOS'
+import { initAccordion } from './scripts/accordion'
 
 let currentWidth = window.innerWidth
 
@@ -21,6 +22,8 @@ window.addEventListener('load', () => {
   scroll
 
   initAOS()
+
+  initAccordion()
 })
 
 window.addEventListener('resize', () => {
